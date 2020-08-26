@@ -6,6 +6,12 @@ func changeVal(a *int) {
 	*a = 100;
 }
 
+func swap(a *int, b *int) {
+	flag := *a
+	*a = *b
+	*b = flag
+
+}
 
 func main() {
 	var x = 5
@@ -48,5 +54,20 @@ func main() {
 	changeVal(&num_to_change)
 
 	fmt.Println(num_to_change)
+
+	//////////////////////////////////////////////////////////
+	// Now I'm trying to swap to values						//
+	//////////////////////////////////////////////////////////
+
+	value1 := 1
+	value2 := 6
+
+	fmt.Println("The value of value1 and value 2 are: ", value1, value2)
+
+	swap(&value1, &value2)
+
+	fmt.Println("Now I that I swapped those two varables: ", value1, value2)
+
+
 
 }
