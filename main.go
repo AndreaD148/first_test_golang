@@ -66,7 +66,7 @@ func main() {
 
 	swap(&value1, &value2)
 
-	fmt.Println("Now I that I swapped those two varables: ", value1, value2)
+	fmt.Println("Now that I swapped those two varables: ", value1, value2)
 
 
 
