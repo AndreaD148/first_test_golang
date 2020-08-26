@@ -2,6 +2,9 @@ package main
 
 import "fmt"	
 
+func changeVal(a *int) {
+	*a = 100;
+}
 
 
 func main() {
@@ -28,4 +31,22 @@ func main() {
 	copy_of_array[0] = 100
 	
 	fmt.Println(my_array, copy_of_array)
+
+
+	//////////////////////////////////////////////////////////
+	// using function that take a pointer of two			//
+	// variables and chnage the value of a passing variable	//
+	// and after, in the main function, printing the result	//
+	//////////////////////////////////////////////////////////
+
+	num_to_change := 2
+
+	fmt.Println("Now the value of num_to_change is: ", num_to_change)
+
+	fmt.Println("Now is gonna be changing the value?")
+	
+	changeVal(&num_to_change)
+
+	fmt.Println(num_to_change)
+
 }
